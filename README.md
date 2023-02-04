@@ -18,7 +18,7 @@ Principle Data Engineer by trade, have coding experience in python, joining the 
 #### Music and Sound Lead
 Cellar monkey turned junior accountant by trade, music maker by passion and hobby. Here to make some tunes, kick ass and I would say chew bubblegum but I don't like it.
 
-###Hermitting
+### Hermitting
 #### Lead Apprectice Junior Programmer/Along for the Ride
 Junior accountant/billing specialist by trade, with an unbridled enthusiasm for Excel. Starting up a computer science class shortly, and will be working on python shortly after that. Mostly along for the ride, but hoping to be of some use!
 
