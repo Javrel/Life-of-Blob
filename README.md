@@ -2,7 +2,8 @@
 
 Welcome to TBD, the point of this project is for a bunch of begginers interested in game development to learn how to make a simple game, develop a team, and see if we want to do it again with a bit more oomph.
 
-Once we have a our three primary positions filled (code [x] , sound [x] , graphics []) we will decide what we are creating and get underway.
+## The Life of Blob
+Our first game will be a simple platformer about the lifecylce of an alien blob!
 
 ## How we work
 
