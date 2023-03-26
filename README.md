@@ -13,7 +13,7 @@ More details to follow
 
 ### Javrel
 #### Lead Dev (Also general project lead)
-Principle Data Engineer by trade, have coding experience in python, joining the team as lead dev and project lead. Have only dabbled in game creation years ago. I want to create a game but need a team, so I would like to create a low stress learning environment to create one with likemineded people.
+Data Engineer by trade, have coding experience in python, joining the team as lead dev and project lead. Have only dabbled in game creation years ago. I want to create a game but need a team, so I would like to create a low stress learning environment to create one with likemineded people.
 
 ### KriegMorgan
 #### Music and Sound Lead
