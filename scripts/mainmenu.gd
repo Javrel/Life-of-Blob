@@ -8,15 +8,13 @@ export var mainGameScene : PackedScene
 func _ready():
 	pass # Replace with function body. 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_NewGameButton_button_up():
-	 get_tree().change_scene("res://level1.tscn")
-
-
 func _on_QuitButton_button_up():
 	get_tree().quit()
+
+
+func _on_NewGame2_button_up():
+	get_tree().change_scene("res://level2.tscn")
+
+
+func _on_NewGame1_button_up():
+	get_tree().change_scene("res://level1.tscn")
