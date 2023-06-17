@@ -8,17 +8,97 @@ extents = Vector2( 726, 27 )
 
 [node name="level1" type="Node2D"]
 
-[node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2( 593, 684 )
+[node name="Blob" parent="." instance=ExtResource( 1 )]
+
+[node name="Floors" type="Node2D" parent="."]
+
+[node name="Floor6" type="StaticBody2D" parent="Floors"]
+position = Vector2( 2086, 844 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Floor"]
+[node name="Sprite" type="Sprite" parent="Floors/Floor6"]
 scale = Vector2( 22.7813, 1 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Floor6"]
 shape = SubResource( 1 )
 
-[node name="Blob" parent="." instance=ExtResource( 1 )]
+[node name="Floor4" type="StaticBody2D" parent="Floors"]
+position = Vector2( 3199, -238 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Floor4"]
+scale = Vector2( 22.7813, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Floor4"]
+shape = SubResource( 1 )
+
+[node name="Floor3" type="StaticBody2D" parent="Floors"]
+position = Vector2( -493, -199 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Floor3"]
+scale = Vector2( 22.7813, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Floor3"]
+shape = SubResource( 1 )
+
+[node name="Floor2" type="StaticBody2D" parent="Floors"]
+position = Vector2( 2339, 182 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Floor2"]
+scale = Vector2( 22.7813, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Floor2"]
+shape = SubResource( 1 )
+
+[node name="Floor" type="StaticBody2D" parent="Floors"]
+position = Vector2( 655, 534 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Floor"]
+scale = Vector2( 22.7813, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Floor"]
+shape = SubResource( 1 )
+
+[node name="Floor5" type="StaticBody2D" parent="Floors"]
+position = Vector2( -583, 796 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Floor5"]
+scale = Vector2( 22.7813, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Floor5"]
+shape = SubResource( 1 )
+
+[node name="Floor7" type="StaticBody2D" parent="Floors"]
+position = Vector2( 1405, -616 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Floor7"]
+scale = Vector2( 22.7813, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Floor7"]
+shape = SubResource( 1 )
