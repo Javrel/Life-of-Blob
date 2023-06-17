@@ -27,7 +27,7 @@ func jump():
 	# jump and reset power
 	velocity.y = -abs(power)*2
 	velocity.x = power
-	if power <=(MAX_POWER/2):
+	if abs(power) <=(MAX_POWER/2):
 		$soundjumplow.play()
 	else:
 		$soundjumphigh.play()
