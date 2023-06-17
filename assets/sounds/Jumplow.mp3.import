@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Jumplow.mp3-50caa1534139b7d8d67bd857c89fba87.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Jumplow.mp3"
+dest_files=[ "res://.import/Jumplow.mp3-50caa1534139b7d8d67bd857c89fba87.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

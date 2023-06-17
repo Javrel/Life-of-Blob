@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/FallingRocks.mp3-d689d1cd518c9c277f450150727a94c0.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/FallingRocks.mp3"
+dest_files=[ "res://.import/FallingRocks.mp3-d689d1cd518c9c277f450150727a94c0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
