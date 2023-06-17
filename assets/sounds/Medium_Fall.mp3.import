@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Medium_Fall.mp3-14b8fa8320964fbc6ba70b548efaa35d.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Medium_Fall.mp3"
+dest_files=[ "res://.import/Medium_Fall.mp3-14b8fa8320964fbc6ba70b548efaa35d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
