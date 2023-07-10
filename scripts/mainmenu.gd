@@ -7,7 +7,7 @@ var menu_fade_out = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	Transition.transition_in()
 
 func play_hover():
 	$Audio/Hover.play()
@@ -15,21 +15,16 @@ func play_hover():
 func play_select():
 	$Audio/Select.play()
 	
-func transition(scene):
-	if scene:
-		get_tree().change_scene(scene)
-	else:
-		get_tree().quit()
-		
+
 		
 func _on_QuitButton_button_up():
-	transition("")
+	Transition.change_scene("")
 	
 func _on_NewGame2_button_up():
-	transition("res://level2.tscn")
+	Transition.change_scene("res://level2.tscn")
 	
 func _on_NewGame1_button_up():
-	transition("res://level1.tscn")
+	Transition.change_scene("res://level1.tscn")
 	
 func _on_OptionsButton_button_up():
 	pass # Replace with function body.
