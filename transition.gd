@@ -1,9 +1,5 @@
 extends CanvasLayer
 
-
-signal transitioned 
-
-
 func transition_in() -> void:
 	$AnimationPlayer.play("fade_to_normal")
 
