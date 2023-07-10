@@ -8,7 +8,7 @@ func transition_out() -> void:
 
 func change_scene(target: String) -> void:
 	transition_out()
-	yield($AnimationPlayer, 'animation_finished')
+	yield($AnimationPlayer,"animation_finished")
 	if target:
 		get_tree().change_scene(target)
 		transition_in()

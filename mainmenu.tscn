@@ -175,14 +175,10 @@ stream = ExtResource( 5 )
 stream = ExtResource( 6 )
 
 [connection signal="button_down" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer/NewGame1" to="." method="_on_NewGame1_button_down"]
-[connection signal="button_up" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer/NewGame1" to="." method="_on_NewGame1_button_up"]
 [connection signal="mouse_entered" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer/NewGame1" to="." method="_on_NewGame1_mouse_entered"]
 [connection signal="button_down" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer4/NewGame2" to="." method="_on_NewGame2_button_down"]
-[connection signal="button_up" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer4/NewGame2" to="." method="_on_NewGame2_button_up"]
 [connection signal="mouse_entered" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer4/NewGame2" to="." method="_on_NewGame2_mouse_entered"]
 [connection signal="button_down" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer2/OptionsButton" to="." method="_on_OptionsButton_button_down"]
-[connection signal="button_up" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer2/OptionsButton" to="." method="_on_OptionsButton_button_up"]
 [connection signal="mouse_entered" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer2/OptionsButton" to="." method="_on_OptionsButton_mouse_entered"]
 [connection signal="button_down" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer3/QuitButton" to="." method="_on_QuitButton_button_down"]
-[connection signal="button_up" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer3/QuitButton" to="." method="_on_QuitButton_button_up"]
 [connection signal="mouse_entered" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer3/QuitButton" to="." method="_on_QuitButton_mouse_entered"]
