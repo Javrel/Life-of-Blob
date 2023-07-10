@@ -164,14 +164,14 @@ text = "Quit"
 
 [node name="Audio" type="Node2D" parent="."]
 
-[node name="Select" type="AudioStreamPlayer2D" parent="Audio"]
-stream = ExtResource( 5 )
-
-[node name="Music" type="AudioStreamPlayer2D" parent="Audio"]
+[node name="Music" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource( 4 )
 autoplay = true
 
-[node name="Hover" type="AudioStreamPlayer2D" parent="Audio"]
+[node name="Select" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 5 )
+
+[node name="Hover" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource( 6 )
 
 [connection signal="button_down" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer/NewGame1" to="." method="_on_NewGame1_button_down"]
