@@ -150,5 +150,6 @@ autoplay = true
 [node name="Select" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource( 4 )
 
+[connection signal="ready" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer/VolumeSlider" to="." method="_on_VolumeSlider_ready"]
 [connection signal="value_changed" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer/VolumeSlider" to="." method="_on_VolumeSlider_value_changed"]
 [connection signal="button_down" from="MenuContainer/VBoxContainer/VBoxContainer/MarginContainer2/back" to="." method="_on_back_button_down"]
