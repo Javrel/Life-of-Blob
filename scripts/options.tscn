@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/fonts/GladlyAcceptRegular-Wyjov.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://options.gd" type="Script" id=2]
+[ext_resource path="res://scripts/options.gd" type="Script" id=2]
 [ext_resource path="res://assets/sounds/The Blob Suite drums fixed.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/sounds/SelectSound.mp3" type="AudioStream" id=4]
 

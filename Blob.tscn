@@ -4,199 +4,121 @@
 [ext_resource path="res://assets/sounds/Jumphigh.mp3" type="AudioStream" id=2]
 [ext_resource path="res://assets/sounds/Jumplow.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/sounds/Medium_Fall.mp3" type="AudioStream" id=4]
+[ext_resource path="res://scripts/Blob.gd" type="Script" id=5]
 
-[sub_resource type="GDScript" id=1]
-script/source = "extends KinematicBody2D
-
-var velocity: Vector2 = Vector2(0,0)
-var power: int = 0
-var on_ground: bool = false
-
-const MAX_POWER: int = 1000
-const GRAVITY: int = 20
-
-onready var blobsprite = $blobsprite
-
-var first: bool = true
-
-func increment_power() -> void:
-	if power < MAX_POWER:
-		power += 20
-
-func decrement_power() -> void:
-	if abs(power) < MAX_POWER:
-		power -= 20
-		
-func jump() -> void:
-	# jump and reset power
-	velocity.y = -abs(power)*2
-	velocity.x = power
-	
-	blobsprite.animation = \"jump\"
-	
-	if abs(power) <=(MAX_POWER/2):
-		$soundjumplow.play()
-	else:
-		$soundjumphigh.play()
-		
-	power = 0
-	
-func _physics_process(_delta):
-	if first:
-		blobsprite.animation = \"idle\"
-		blobsprite.play()
-		first = false
-		
-	if on_ground:
-		if Input.is_action_pressed(\"ui_left\"):
-			if blobsprite.animation != \"charge\":
-				blobsprite.animation = \"charge\"
-				blobsprite.flip_h = true
-			decrement_power()
-		elif Input.is_action_pressed(\"ui_right\"):
-			if blobsprite.animation != \"charge\":
-				blobsprite.animation = \"charge\"
-				blobsprite.flip_h = false
-			increment_power()
-		if Input.is_action_just_released(\"ui_right\") or Input.is_action_just_released(\"ui_left\"):
-			jump()
-		else:
-			blobsprite.animation = \"idle\"
-			
-				
-	velocity.y += GRAVITY
-	
-	velocity = move_and_slide(velocity,Vector2(0,-1))
-
-	
-
-	if is_on_floor():
-		if not on_ground:
-		  $soundfallmed.play()	
-		  on_ground = true
-	else:
-		on_ground = false
-		velocity.y += GRAVITY
-	
-	if on_ground:
-		velocity.x = lerp(velocity.x, 0, 0.1)	
-	else:
-		velocity.x = lerp(velocity.x, 0, 0.01)	
-"
-
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 21.0
 height = 0.0
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
 region = Rect2( 64, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 1 )
 region = Rect2( 128, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )
 region = Rect2( 192, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 1 )
 region = Rect2( 256, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
 region = Rect2( 320, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 1 )
 region = Rect2( 384, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 1 )
 region = Rect2( 448, 128, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 1 )
 region = Rect2( 64, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 1 )
 region = Rect2( 128, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 1 )
 region = Rect2( 192, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 1 )
 region = Rect2( 256, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 1 )
 region = Rect2( 320, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 1 )
 region = Rect2( 384, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 1 )
 region = Rect2( 448, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 64, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 1 )
 region = Rect2( 64, 64, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 1 )
 region = Rect2( 128, 64, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 1 )
 region = Rect2( 192, 64, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 1 )
 region = Rect2( 256, 64, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=23]
 atlas = ExtResource( 1 )
 region = Rect2( 320, 64, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=24]
 atlas = ExtResource( 1 )
 region = Rect2( 384, 64, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=25]
 atlas = ExtResource( 1 )
 region = Rect2( 448, 64, 64, 64 )
 
-[sub_resource type="SpriteFrames" id=27]
+[sub_resource type="SpriteFrames" id=26]
 animations = [ {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "idle",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
 "name": "charge",
 "speed": 20.0
 }, {
-"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
 "loop": true,
 "name": "jump",
 "speed": 10.0
@@ -204,13 +126,13 @@ animations = [ {
 
 [node name="Blob" type="KinematicBody2D"]
 position = Vector2( 0, 2 )
-script = SubResource( 1 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="soundjumphigh" type="AudioStreamPlayer" parent="."]
 pause_mode = 1
@@ -228,5 +150,5 @@ current = true
 
 [node name="blobsprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1, -10 )
-frames = SubResource( 27 )
+frames = SubResource( 26 )
 animation = "charge"
