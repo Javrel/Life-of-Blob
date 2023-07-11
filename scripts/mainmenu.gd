@@ -33,14 +33,14 @@ func _on_QuitButton_button_down():
 	
 func _on_OptionsButton_button_down():
 	play_select()
-	Transition.change_scene("res://options.tscn")
+	Transition.change_scene("res://scenes/options.tscn")
 
 func _on_NewGame2_button_down():
 	play_select()
-	Transition.change_scene("res://level2.tscn")
+	Transition.change_scene("res://scenes/level2.tscn")
 
 func _on_NewGame1_button_down():
 	play_select()
-	Transition.change_scene("res://level1.tscn")
+	Transition.change_scene("res://scenes/level1.tscn")
 
 
