@@ -11,5 +11,5 @@ dest_files=[ "res://.import/HoverSound.mp3-87eb153e319e62ee31fa8e4306234b92.mp3s
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

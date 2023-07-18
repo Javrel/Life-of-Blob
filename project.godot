@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Life-of- Blob"
-run/main_scene="res://mainmenu.tscn"
+run/main_scene="res://scenes/mainmenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Transition="*res://scenes/transition.tscn"
 
 [display]
 
@@ -52,4 +56,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://assets/Mossy Tileset/default_env.tres"

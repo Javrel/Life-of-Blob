@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Hard_Fall.mp3-fa0ccd47fa222eb7fb62e6f3d4853e4b.mp3st
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
