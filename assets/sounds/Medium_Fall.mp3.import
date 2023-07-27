@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Medium_Fall.mp3-14b8fa8320964fbc6ba70b548efaa35d.mp3str"
+uid="uid://b8tqgs47d7704"
+path="res://.godot/imported/Medium_Fall.mp3-14b8fa8320964fbc6ba70b548efaa35d.mp3str"
 
 [deps]
 
 source_file="res://assets/sounds/Medium_Fall.mp3"
-dest_files=[ "res://.import/Medium_Fall.mp3-14b8fa8320964fbc6ba70b548efaa35d.mp3str" ]
+dest_files=["res://.godot/imported/Medium_Fall.mp3-14b8fa8320964fbc6ba70b548efaa35d.mp3str"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

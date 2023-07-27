@@ -1,7 +1,7 @@
 extends Node2D
 
 
-export var mainGameScene : PackedScene
+@export var mainGameScene : PackedScene
 
 var menu_fade_out = false
 
@@ -29,18 +29,18 @@ func _on_QuitButton_mouse_entered():
 
 func _on_QuitButton_button_down():
 	play_select()
-	Transition.change_scene("")
+	Transition.change_scene_to_file("")
 	
 func _on_OptionsButton_button_down():
 	play_select()
-	Transition.change_scene("res://scenes/options.tscn")
+	Transition.change_scene_to_file("res://scenes/options.tscn")
 
 func _on_NewGame2_button_down():
 	play_select()
-	Transition.change_scene("res://scenes/level2.tscn")
+	Transition.change_scene_to_file("res://scenes/level2.tscn")
 
 func _on_NewGame1_button_down():
 	play_select()
-	Transition.change_scene("res://scenes/level1.tscn")
+	Transition.change_scene_to_file("res://scenes/level1.tscn")
 
 

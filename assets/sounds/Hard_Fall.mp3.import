@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Hard_Fall.mp3-fa0ccd47fa222eb7fb62e6f3d4853e4b.mp3str"
+uid="uid://c84ecoo8gj5tu"
+path="res://.godot/imported/Hard_Fall.mp3-fa0ccd47fa222eb7fb62e6f3d4853e4b.mp3str"
 
 [deps]
 
 source_file="res://assets/sounds/Hard_Fall.mp3"
-dest_files=[ "res://.import/Hard_Fall.mp3-fa0ccd47fa222eb7fb62e6f3d4853e4b.mp3str" ]
+dest_files=["res://.godot/imported/Hard_Fall.mp3-fa0ccd47fa222eb7fb62e6f3d4853e4b.mp3str"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
