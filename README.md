@@ -5,6 +5,9 @@ Welcome to TBD, the point of this project is for a bunch of begginers interested
 ## The Life of Blob
 Our first game will be a simple platformer about the lifecylce of an alien blob!
 
+### Requires
+Godot 4.0.3
+
 ## How we work
 
 More details to follow
