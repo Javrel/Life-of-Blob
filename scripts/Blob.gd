@@ -1,13 +1,12 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
-var velocity: Vector2 = Vector2(0,0)
 var power: int = 0
 var on_ground: bool = false
 
-const MAX_POWER: int = 1000
+const MAX_POWER: float = 1000
 const GRAVITY: int = 20
 
-onready var blobsprite = $blobsprite
+@onready var blobsprite = $blobsprite
 
 var first: bool = true
 
@@ -58,19 +57,22 @@ func _physics_process(_delta):
 				
 	velocity.y += GRAVITY
 	
-	velocity = move_and_slide(velocity,Vector2(0,-1))
+	set_velocity(velocity)
+	set_up_direction(Vector2(0,-1))
+	move_and_slide()
+	velocity = velocity
 
 	
 
 	if is_on_floor():
 		if not on_ground:
-		  $soundfallmed.play()	
-		  on_ground = true
+			$soundfallmed.play()	
+			on_ground = true
 	else:
 		on_ground = false
 		velocity.y += GRAVITY
 	
 	if on_ground:
-		velocity.x = lerp(velocity.x, 0, 0.1)	
+		velocity.x = lerp(velocity.x, 0.0, 0.1)	
 	else:
-		velocity.x = lerp(velocity.x, 0, 0.01)	
+		velocity.x = lerp(velocity.x, 0.0, 0.01)	

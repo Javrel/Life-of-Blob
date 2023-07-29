@@ -13,7 +13,7 @@ func _on_VolumeSlider_value_changed(value):
 
 func _on_back_button_down():
 	play_select()
-	Transition.change_scene("res://scenes/mainmenu.tscn")
+	Transition.change_scene_to_file("res://scenes/mainmenu.tscn")
 
 
 func _on_VolumeSlider_ready():

@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/The Blob Suite drums fixed.mp3-35ba8d86b29604e4b07d618c72313e46.mp3str"
+uid="uid://bvyxftc5rtgpl"
+path="res://.godot/imported/The Blob Suite drums fixed.mp3-35ba8d86b29604e4b07d618c72313e46.mp3str"
 
 [deps]
 
 source_file="res://assets/sounds/The Blob Suite drums fixed.mp3"
-dest_files=[ "res://.import/The Blob Suite drums fixed.mp3-35ba8d86b29604e4b07d618c72313e46.mp3str" ]
+dest_files=["res://.godot/imported/The Blob Suite drums fixed.mp3-35ba8d86b29604e4b07d618c72313e46.mp3str"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

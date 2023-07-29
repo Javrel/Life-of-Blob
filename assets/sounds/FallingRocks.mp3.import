@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/FallingRocks.mp3-d689d1cd518c9c277f450150727a94c0.mp3str"
+uid="uid://c5qwnaftouurv"
+path="res://.godot/imported/FallingRocks.mp3-d689d1cd518c9c277f450150727a94c0.mp3str"
 
 [deps]
 
 source_file="res://assets/sounds/FallingRocks.mp3"
-dest_files=[ "res://.import/FallingRocks.mp3-d689d1cd518c9c277f450150727a94c0.mp3str" ]
+dest_files=["res://.godot/imported/FallingRocks.mp3-d689d1cd518c9c277f450150727a94c0.mp3str"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
