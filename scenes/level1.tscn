@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://d01dp0bn8pidh"]
+[gd_scene load_steps=25 format=3 uid="uid://d01dp0bn8pidh"]
 
 [ext_resource type="PackedScene" uid="uid://c27km6hx6xitk" path="res://scenes/blob.tscn" id="1"]
+[ext_resource type="Script" path="res://scripts/level1.gd" id="1_7mej1"]
 [ext_resource type="Texture2D" uid="uid://cjmhyuylq5348" path="res://assets/Ver.2 Tileset/BC.png" id="2_l13du"]
 [ext_resource type="Texture2D" uid="uid://c6cayscdsxvy7" path="res://assets/Ver.2 Tileset/BL.png" id="3_k1p1a"]
 [ext_resource type="Texture2D" uid="uid://348cp0vgeuom" path="res://assets/Ver.2 Tileset/BLC.png" id="4_r7m7y"]
@@ -11,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dvirigfjkss67" path="res://assets/Ver.2 Tileset/LR.png" id="9_k4cii"]
 [ext_resource type="Texture2D" uid="uid://io5o7dgemwxo" path="res://assets/Ver.2 Tileset/B.png" id="10_ft7pf"]
 [ext_resource type="PackedScene" uid="uid://cvr5rbixp2yt8" path="res://scenes/platform.tscn" id="11_7txr3"]
+[ext_resource type="AudioStream" uid="uid://dt6vacrr816vt" path="res://assets/sounds/Wet Ambient Sounds.mp3" id="12_fwkj0"]
+[ext_resource type="AudioStream" uid="uid://bdr4efh1xydxi" path="res://assets/sounds/Vocal Intro.mp3" id="14_t8xyf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qb6y0"]
 texture = ExtResource("2_l13du")
@@ -162,6 +165,7 @@ sources/16 = SubResource("TileSetAtlasSource_ekdkh")
 sources/17 = SubResource("TileSetAtlasSource_bwcr7")
 
 [node name="level1" type="Node2D"]
+script = ExtResource("1_7mej1")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(232, -252)
@@ -191,3 +195,10 @@ position = Vector2(3448, -1151)
 
 [node name="platform5" parent="Platforms" instance=ExtResource("11_7txr3")]
 position = Vector2(3960, -1411)
+
+[node name="AudioStreamAmbient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_fwkj0")
+autoplay = true
+
+[node name="AudioStreamIntro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_t8xyf")
