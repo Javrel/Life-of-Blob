@@ -14,4 +14,3 @@ func change_scene_to_file(target: String) -> void:
 		transition_in()
 	else:
 		get_tree().quit()
-	

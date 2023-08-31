@@ -3,6 +3,8 @@ extends CharacterBody2D
 var power: int = 0
 var on_ground: bool = false
 
+var controllable = true
+
 const MAX_POWER: float = 1000
 const GRAVITY: int = 20
 
@@ -37,22 +39,22 @@ func _physics_process(_delta):
 		blobsprite.animation = "idle"
 		blobsprite.play()
 		first = false
-		
-	if on_ground:
-		if Input.is_action_pressed("ui_left"):
-			if blobsprite.animation != "charge":
-				blobsprite.animation = "charge"
-				blobsprite.flip_h = true
-			decrement_power()
-		elif Input.is_action_pressed("ui_right"):
-			if blobsprite.animation != "charge":
-				blobsprite.animation = "charge"
-				blobsprite.flip_h = false
-			increment_power()
-		if Input.is_action_just_released("ui_right") or Input.is_action_just_released("ui_left"):
-			jump()
-		else:
-			blobsprite.animation = "idle"
+	if controllable:	
+		if on_ground:
+			if Input.is_action_pressed("ui_left"):
+				if blobsprite.animation != "charge":
+					blobsprite.animation = "charge"
+					blobsprite.flip_h = true
+				decrement_power()
+			elif Input.is_action_pressed("ui_right"):
+				if blobsprite.animation != "charge":
+					blobsprite.animation = "charge"
+					blobsprite.flip_h = false
+				increment_power()
+			if Input.is_action_just_released("ui_right") or Input.is_action_just_released("ui_left"):
+				jump()
+			else:
+				blobsprite.animation = "idle"
 			
 				
 	velocity.y += GRAVITY
