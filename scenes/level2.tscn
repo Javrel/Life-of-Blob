@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciyoyl4fosvi5"]
+[gd_scene load_steps=3 format=3 uid="uid://ciyoyl4fosvi5"]
 
 [ext_resource type="PackedScene" uid="uid://c27km6hx6xitk" path="res://scenes/blob.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cvr5rbixp2yt8" path="res://scenes/platform.tscn" id="1_6hr16"]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="platform2" parent="." instance=ExtResource("1_6hr16")]
+
 [node name="Blob" parent="." instance=ExtResource("1")]
-position = Vector2(-898, -2558)
+position = Vector2(-5, -343)
