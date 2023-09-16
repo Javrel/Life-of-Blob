@@ -40,7 +40,6 @@ func dead():
 	is_dead = true
 	velocity = Vector2(0,0)
 	$blobsprite.play("dead")
-	$CollisionShape2D.disabled = true
 	$Timer.start()
 	
 func _physics_process(_delta):
@@ -91,9 +90,10 @@ func _physics_process(_delta):
 			
 		if get_slide_collision_count() > 0:
 			for i in range(get_slide_collision_count()):
-				if "Deadly" in get_slide_collision(i).collider.name:
+				if "Deadly" in get_slide_collision(i).get_collider().name:
 					dead()
 		
 
 func _on_timer_timeout():
-	Transition.change_scene_to_file("res://scenes/mainmmenu.tscn")
+	Transition.change_scene_to_file("res://scenes/game_over.tscn")
+	is_dead = false

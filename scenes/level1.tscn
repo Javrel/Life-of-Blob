@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d01dp0bn8pidh"]
+[gd_scene load_steps=28 format=3 uid="uid://d01dp0bn8pidh"]
 
 [ext_resource type="PackedScene" uid="uid://c27km6hx6xitk" path="res://scenes/blob.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/level1.gd" id="1_7mej1"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://dt6vacrr816vt" path="res://assets/sounds/Wet Ambient Sounds.mp3" id="12_fwkj0"]
 [ext_resource type="AudioStream" uid="uid://bdr4efh1xydxi" path="res://assets/sounds/Vocal Intro.mp3" id="14_t8xyf"]
 [ext_resource type="Script" path="res://scenes/ExitZone.gd" id="15_64ml8"]
+[ext_resource type="PackedScene" uid="uid://ddy7ccuehfq82" path="res://scenes/spike.tscn" id="16_58gsk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qb6y0"]
 texture = ExtResource("2_l13du")
@@ -216,5 +217,8 @@ autoplay = true
 
 [node name="AudioStreamIntro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_t8xyf")
+
+[node name="Sprite2D" parent="." instance=ExtResource("16_58gsk")]
+position = Vector2(702, -2588)
 
 [connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]
