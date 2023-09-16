@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://c27km6hx6xitk"]
+[gd_scene load_steps=34 format=3 uid="uid://c27km6hx6xitk"]
 
 [ext_resource type="Texture2D" uid="uid://c8k05xhw4111e" path="res://assets/Sprites/slime.jiggle.png" id="1"]
 [ext_resource type="AudioStream" uid="uid://cc1124lu25yna" path="res://assets/sounds/Jumphigh.mp3" id="2"]
@@ -41,6 +41,14 @@ region = Rect2(384, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="17"]
 atlas = ExtResource("1")
 region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rd3g"]
+atlas = ExtResource("1")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e0gh"]
+atlas = ExtResource("1")
+region = Rect2(0, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="2"]
 atlas = ExtResource("1")
@@ -139,6 +147,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_7rd3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e0gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rd3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e0gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rd3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e0gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rd3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e0gh")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("2")
 }, {
 "duration": 1.0,
@@ -219,4 +256,9 @@ stream = ExtResource("4")
 [node name="blobsprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -10)
 sprite_frames = SubResource("26")
-animation = &"charge"
+animation = &"dead"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
