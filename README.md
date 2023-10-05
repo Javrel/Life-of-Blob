@@ -26,6 +26,10 @@ Cellar monkey turned junior accountant by trade, music maker by passion and hobb
 #### Lead Apprectice Junior Programmer/Along for the Ride
 Junior accountant/billing specialist by trade, with an unbridled enthusiasm for Excel. Starting up a computer science class shortly, and will be working on python shortly after that. Mostly along for the ride, but hoping to be of some use!
 
+### SutaruToku
+#### Lead Graphic Designer and Artist
+Multi-media artist who has a keen eye for detail and an inherent creative flare.  I make YouTube videos and create art in my free time as well as indulge in fighting games. Aesthetics are my thing.
+
 ## What we need
 
 Mostly a graphics person atm, more details to follow
