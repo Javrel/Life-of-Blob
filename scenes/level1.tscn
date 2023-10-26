@@ -260,6 +260,6 @@ autoplay = true
 stream = ExtResource("14_t8xyf")
 
 [node name="Sprite2D" parent="." instance=ExtResource("16_58gsk")]
-position = Vector2(702, -2588)
+position = Vector2(638, -2588)
 
 [connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]

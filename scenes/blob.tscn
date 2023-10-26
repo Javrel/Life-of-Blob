@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c27km6hx6xitk"]
+[gd_scene load_steps=22 format=3 uid="uid://c27km6hx6xitk"]
 
 [ext_resource type="AudioStream" uid="uid://cc1124lu25yna" path="res://assets/sounds/Jumphigh.mp3" id="2"]
 [ext_resource type="AudioStream" uid="uid://chvehqr0kgy4" path="res://assets/sounds/Jumplow.mp3" id="3"]
@@ -15,6 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://b41ckfovmu31h" path="res://assets/Sprites/blob_ver0.1/idle3.png" id="13_pl4li"]
 [ext_resource type="Texture2D" uid="uid://j7et4gvkvhtp" path="res://assets/Sprites/blob_ver0.1/idle4.png" id="14_vfaae"]
 [ext_resource type="Texture2D" uid="uid://daybnie3nm26b" path="res://assets/Sprites/blob_ver0.1/blob jump1.png" id="15_f4qie"]
+[ext_resource type="AudioStream" uid="uid://can6d6vqnnh0x" path="res://assets/sounds/death/Generic_Death_1.mp3" id="16_kbrq5"]
+[ext_resource type="AudioStream" uid="uid://ckvuoss2hu4qy" path="res://assets/sounds/death/Generic_Death_2.mp3" id="17_qopmt"]
+[ext_resource type="AudioStream" uid="uid://bliikdefc3c80" path="res://assets/sounds/death/Generic_Death_3.mp3" id="18_bsbkk"]
+[ext_resource type="AudioStream" uid="uid://ccep7te1xqtom" path="res://assets/sounds/death/Generic_Death_4.mp3" id="19_q1vqm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i5ija"]
 radius = 14.0
@@ -109,5 +113,17 @@ animation = &"charge_one"
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
+
+[node name="one" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_kbrq5")
+
+[node name="two" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_qopmt")
+
+[node name="three" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_bsbkk")
+
+[node name="four" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_q1vqm")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

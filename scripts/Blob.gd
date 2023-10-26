@@ -10,6 +10,15 @@ var is_dead = false
 const MAX_POWER: float = 1000
 const GRAVITY: int = 20
 
+@onready var deathlist = [
+	get_node("one"),
+	get_node("two"),
+	get_node("three"),
+	get_node("four")
+	]
+	
+var rng = RandomNumberGenerator.new()
+
 @onready var blobsprite = $blobsprite
 
 var first: bool = true
@@ -39,7 +48,11 @@ func dead():
 	is_dead = true
 	velocity = Vector2(0,0)
 	# $blobsprite.play("dead")
+	deathlist[randi() % deathlist.size()].play()
 	$Timer.start()
+	
+
+	
 	
 func do_power(flip: bool):
 	if flip:
