@@ -15,19 +15,18 @@ const GRAVITY: int = 20
 var first: bool = true
 
 func increment_power() -> void:
-	if power < MAX_POWER:
-		power += 20
+	power = min(power+20,MAX_POWER)
 
 func decrement_power() -> void:
-	if abs(power) < MAX_POWER:
-		power -= 20
+	power = max(power-20, -MAX_POWER)
 		
 func jump() -> void:
 	# jump and reset power
 	velocity.y = -abs(power)*2
 	velocity.x = power
-	
+
 	blobsprite.animation = "jump"
+	blobsprite.play()
 	
 	if abs(power) <=(MAX_POWER/2):
 		$soundjumplow.play()
@@ -39,8 +38,28 @@ func jump() -> void:
 func dead():
 	is_dead = true
 	velocity = Vector2(0,0)
-	$blobsprite.play("dead")
+	# $blobsprite.play("dead")
 	$Timer.start()
+	
+func do_power(flip: bool):
+	if flip:
+		decrement_power()
+		blobsprite.flip_h = flip
+	else:
+		increment_power()
+		blobsprite.flip_h = flip
+	
+	if abs(power) < MAX_POWER:
+		if blobsprite.animation != "charge_one":							
+			blobsprite.play("charge_one")
+	else:
+		if blobsprite.animation != "charge_two":
+			blobsprite.play("charge_two")
+			
+	print(blobsprite.animation)
+	
+	
+	
 	
 func _physics_process(_delta):
 	if first:
@@ -51,19 +70,13 @@ func _physics_process(_delta):
 		if controllable:	
 			if on_ground:
 				if Input.is_action_pressed("ui_left"):
-					if blobsprite.animation != "charge":
-						blobsprite.animation = "charge"
-						blobsprite.flip_h = true
-					decrement_power()
+					do_power(true)
 				elif Input.is_action_pressed("ui_right"):
-					if blobsprite.animation != "charge":
-						blobsprite.animation = "charge"
-						blobsprite.flip_h = false
-					increment_power()
+					do_power(false)
 				if Input.is_action_just_released("ui_right") or Input.is_action_just_released("ui_left"):
 					jump()
 				else:
-					blobsprite.animation = "idle"
+					blobsprite.play("idle")
 				
 					
 		velocity.y += GRAVITY
@@ -82,6 +95,9 @@ func _physics_process(_delta):
 		else:
 			on_ground = false
 			velocity.y += GRAVITY
+			if velocity.y < 5:
+				blobsprite.play("idle")
+			
 		
 		if on_ground:
 			velocity.x = lerp(velocity.x, 0.0, 0.1)
