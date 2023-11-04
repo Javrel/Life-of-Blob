@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d01dp0bn8pidh"]
+[gd_scene load_steps=30 format=3 uid="uid://d01dp0bn8pidh"]
 
 [ext_resource type="PackedScene" uid="uid://c27km6hx6xitk" path="res://scenes/blob.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/level1.gd" id="1_7mej1"]
@@ -11,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://deuwomgsg0a38" path="res://assets/Ver.2 Tileset/LC.png" id="8_vk3yd"]
 [ext_resource type="Texture2D" uid="uid://dvirigfjkss67" path="res://assets/Ver.2 Tileset/LR.png" id="9_k4cii"]
 [ext_resource type="Texture2D" uid="uid://io5o7dgemwxo" path="res://assets/Ver.2 Tileset/B.png" id="10_ft7pf"]
-[ext_resource type="PackedScene" uid="uid://cvr5rbixp2yt8" path="res://scenes/platform.tscn" id="11_7txr3"]
+[ext_resource type="PackedScene" uid="uid://cvr5rbixp2yt8" path="res://scenes/platform_small.tscn" id="11_7txr3"]
 [ext_resource type="AudioStream" uid="uid://dt6vacrr816vt" path="res://assets/sounds/Wet Ambient Sounds.mp3" id="12_fwkj0"]
+[ext_resource type="PackedScene" uid="uid://d3x3exssa4t4p" path="res://scenes/platform_med.tscn" id="12_vnc4h"]
+[ext_resource type="PackedScene" uid="uid://d0txsfxd50cml" path="res://scenes/platform_large.tscn" id="14_gumtn"]
 [ext_resource type="AudioStream" uid="uid://bdr4efh1xydxi" path="res://assets/sounds/Vocal Intro.mp3" id="14_t8xyf"]
 [ext_resource type="Script" path="res://scenes/ExitZone.gd" id="15_64ml8"]
 [ext_resource type="PackedScene" uid="uid://ddy7ccuehfq82" path="res://scenes/spike.tscn" id="16_58gsk"]
@@ -184,23 +186,62 @@ position = Vector2(-115, -811)
 
 [node name="Platforms" type="Node" parent="."]
 
+[node name="platform8" parent="Platforms" instance=ExtResource("12_vnc4h")]
+position = Vector2(3881, -1635)
+
 [node name="platform" parent="Platforms" instance=ExtResource("11_7txr3")]
-position = Vector2(3973, -251)
+position = Vector2(344, -26)
 
-[node name="platform2" parent="Platforms" instance=ExtResource("11_7txr3")]
-position = Vector2(3263, -500)
+[node name="platform2" parent="Platforms" instance=ExtResource("12_vnc4h")]
+position = Vector2(-188, -272)
 
-[node name="platform3" parent="Platforms" instance=ExtResource("11_7txr3")]
-position = Vector2(2871, -867)
+[node name="platform3" parent="Platforms" instance=ExtResource("14_gumtn")]
+position = Vector2(1177, -24)
 
-[node name="platform4" parent="Platforms" instance=ExtResource("11_7txr3")]
-position = Vector2(3448, -1151)
+[node name="platform4" parent="Platforms" instance=ExtResource("12_vnc4h")]
+position = Vector2(-889, -121)
 
-[node name="platform5" parent="Platforms" instance=ExtResource("11_7txr3")]
-position = Vector2(3960, -1411)
+[node name="platform5" parent="Platforms" instance=ExtResource("14_gumtn")]
+position = Vector2(3696, -154)
 
-[node name="platform6" parent="Platforms" instance=ExtResource("11_7txr3")]
-position = Vector2(2908, -1589)
+[node name="platform6" parent="Platforms" instance=ExtResource("14_gumtn")]
+position = Vector2(-707, -2831)
+
+[node name="platform7" parent="Platforms" instance=ExtResource("12_vnc4h")]
+position = Vector2(3791, -968)
+
+[node name="platform9" parent="Platforms" instance=ExtResource("12_vnc4h")]
+position = Vector2(3342, -1352)
+
+[node name="platform10" parent="Platforms" instance=ExtResource("12_vnc4h")]
+position = Vector2(2924, -134)
+
+[node name="platform11" parent="Platforms" instance=ExtResource("11_7txr3")]
+position = Vector2(2932, -1491)
+
+[node name="platform12" parent="Platforms" instance=ExtResource("12_vnc4h")]
+position = Vector2(2437, -1951)
+
+[node name="platform13" parent="Platforms" instance=ExtResource("11_7txr3")]
+position = Vector2(3334, -418)
+
+[node name="platform13" parent="Platforms/platform13" instance=ExtResource("11_7txr3")]
+position = Vector2(663, -851)
+
+[node name="platform14" parent="Platforms" instance=ExtResource("12_vnc4h")]
+position = Vector2(-2090, -3277)
+
+[node name="platform15" parent="Platforms" instance=ExtResource("12_vnc4h")]
+position = Vector2(2926, -638)
+
+[node name="platform16" parent="Platforms" instance=ExtResource("12_vnc4h")]
+position = Vector2(3591, -737)
+
+[node name="platform17" parent="Platforms" instance=ExtResource("11_7txr3")]
+position = Vector2(1660, -122)
+
+[node name="platform18" parent="Platforms" instance=ExtResource("12_vnc4h")]
+position = Vector2(690, -501)
 
 [node name="ExitZone" type="Area2D" parent="."]
 position = Vector2(-4957, -3477)
@@ -219,6 +260,6 @@ autoplay = true
 stream = ExtResource("14_t8xyf")
 
 [node name="Sprite2D" parent="." instance=ExtResource("16_58gsk")]
-position = Vector2(702, -2588)
+position = Vector2(638, -2588)
 
 [connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]
