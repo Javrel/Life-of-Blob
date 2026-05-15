@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://cvr5rbixp2yt8"]
 
-[ext_resource type="Texture2D" uid="uid://cb3fuhxq2buoo" path="res://assets/Ver.2 Tileset/platforms/platform.png" id="1_s1w0j"]
+[ext_resource type="Texture2D" uid="uid://dkyervdviwci4" path="res://assets/platforms/Platforms Ver1/platform (small).png" id="1_lj07r"]
 
 [node name="platform" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-texture = ExtResource("1_s1w0j")
+texture = ExtResource("1_lj07r")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-200, -64, 197, -65, 197, -18, -1, 40, -201, -20)
+polygon = PackedVector2Array(-80, -33, 77, -31, 72, 2, -1, 40, -71, 2)
